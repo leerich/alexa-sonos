@@ -1,0 +1,38 @@
+{
+  "intents": [
+    {
+      "intent": "StartMusic",
+      "slots": [
+        {
+           "name": "Zone",
+            "type":   "LITERAL"
+        }
+      ]
+    },
+    {
+      "intent": "PlayPlaylist",
+      "slots": [
+      {
+           "name": "Playlist",
+           "type":  "LITERAL"
+      },
+      {
+            "name": "Zone",
+            "type": "LITERAL"
+      }
+     ]
+    },
+    {
+      "intent": "PlayFavorite",
+      "slots": [ ]
+    },
+    {
+      "intent": "StopMusic",
+      "slots": [ ]
+    },
+    {
+      "intent": "PauseAll",
+      "slots": [ ]
+    }
+  ]
+}

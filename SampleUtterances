@@ -1,0 +1,98 @@
+PlayPlaylist tell Sonos to Play playlist {mixed up|Playlist} in the {Study|Zone}
+PlayPlaylist tell Sonos to Play my playlist {mixed up|Playlist} in the {Study|Zone}
+PlayPlaylist tell Sonos to Play my {mixed up|Playlist} playlist in the {Study|Zone}
+PlayPlaylist tell Sonos to Play the {mixed up|Playlist} playlist in the {Study|Zone}
+PlayPlaylist tell Sonos to Play playlist {hot|Playlist} in the {Study|Zone}
+PlayPlaylist tell Sonos to Play my playlist {hot|Playlist} in the {Study|Zone}
+PlayPlaylist tell Sonos to Play my {hot|Playlist} playlist in the {Study|Zone}
+PlayPlaylist tell Sonos to Play the {hot|Playlist} playlist in the {Study|Zone}
+PlayPlaylist tell Sonos to Play playlist {mixed up|Playlist} in the {Bedroom|Zone}
+PlayPlaylist tell Sonos to Play my playlist {mixed up|Playlist} in the {Bedroom|Zone}
+PlayPlaylist tell Sonos to Play my {mixed up|Playlist} playlist in the {Bedroom|Zone}
+PlayPlaylist tell Sonos to Play the {mixed up|Playlist} playlist in the {Bedroom|Zone}
+PlayPlaylist tell Sonos to Play playlist {hot|Playlist} in the {Bedroom|Zone}
+PlayPlaylist tell Sonos to Play my playlist {hot|Playlist} in the {Bedroom|Zone}
+PlayPlaylist tell Sonos to Play my {hot|Playlist} playlist in the {Bedroom|Zone}
+PlayPlaylist tell Sonos to Play the {hot|Playlist} playlist in the {Bedroom|Zone}
+PlayPlaylist tell Sonos to Play playlist {mixed up|Playlist} in the {Bathroom|Zone}
+PlayPlaylist tell Sonos to Play my playlist {mixed up|Playlist} in the {Patio|Zone}
+PlayPlaylist tell Sonos to Play my {mixed up|Playlist} playlist in the {Patio|Zone}
+PlayPlaylist tell Sonos to Play the {mixed up|Playlist} playlist in the {Patio|Zone}
+PlayPlaylist tell Sonos to Play playlist {hot|Playlist} in the {Patio|Zone}
+PlayPlaylist tell Sonos to Play my playlist {hot|Playlist} in the {Patio|Zone}
+PlayPlaylist tell Sonos to Play my {hot|Playlist} playlist in the {Patio|Zone}
+PlayPlaylist tell Sonos to Play the {hot|Playlist} playlist in the {Patio|Zone}
+PlayPlaylist tell Sonos to Play playlist {mixed up|Playlist} in the {Dining Room|Zone}
+PlayPlaylist tell Sonos to Play my playlist {mixed up|Playlist} in the {Dining Room|Zone}
+PlayPlaylist tell Sonos to Play my {mixed up|Playlist} playlist in the {Dining Room|Zone}
+PlayPlaylist tell Sonos to Play the {mixed up|Playlist} playlist in the {Dining Room|Zone}
+PlayPlaylist tell Sonos to Play playlist {hot|Playlist} in the {Dining Room|Zone}
+PlayPlaylist tell Sonos to Play my playlist {hot|Playlist} in the {Dining Room|Zone}
+PlayPlaylist tell Sonos to Play my {hot|Playlist} playlist in the {Dining Room|Zone}
+PlayPlaylist tell Sonos to Play the {hot|Playlist} playlist in the {Dining Room|Zone}
+PlayPlaylist tell Sonos to Play playlist {mixed up|Playlist} in the {Den|Zone}
+PlayPlaylist tell Sonos to Play my playlist {mixed up|Playlist} in the {Den|Zone}
+PlayPlaylist tell Sonos to Play my {mixed up|Playlist} playlist in the {Den|Zone}
+PlayPlaylist tell Sonos to Play the {mixed up|Playlist} playlist in the {Den|Zone}
+PlayPlaylist tell Sonos to Play playlist {hot|Playlist} in the {Den|Zone}
+PlayPlaylist tell Sonos to Play my playlist {hot|Playlist} in the {Den|Zone}
+PlayPlaylist tell Sonos to Play my {hot|Playlist} playlist in the {Den|Zone}
+PlayPlaylist tell Sonos to Play the {hot|Playlist} playlist in the {Den|Zone}
+
+
+StartMusic tell Sonos to start music in the {Den|Zone}
+StartMusic tell Sonos to start my music in the {Den|Zone}
+StartMusic tell Sonos to play my music in the {Den|Zone}
+StartMusic tell Sonos to play music in the {Den|Zone}
+StartMusic tell Sonos to start music in the {Bathroom|Zone}
+StartMusic tell Sonos to start my music in the {Bathroom|Zone}
+StartMusic tell Sonos to play my music in the {Bathroom|Zone}
+StartMusic tell Sonos to play music in the {Bathroom|Zone}
+StartMusic tell Sonos to start music in the {Bedroom|Zone}
+StartMusic tell Sonos to start my music in the {Bedroom|Zone}
+StartMusic tell Sonos to play my music in the {Bedroom|Zone}
+StartMusic tell Sonos to play music in the {Bedroom|Zone}
+StartMusic tell Sonos to start music in the {Dining Room|Zone}
+StartMusic tell Sonos to start my music in the {Dining Room|Zone}
+StartMusic tell Sonos to play my music in the {Dining Room|Zone}
+StartMusic tell Sonos to play music in the {Dining Room|Zone}
+StartMusic tell Sonos to start music in the {Patio|Zone}
+StartMusic tell Sonos to start my music in the {Patio|Zone}
+StartMusic tell Sonos to play my music in the {Patio|Zone}
+StartMusic tell Sonos to play music in the {Patio|Zone}
+StartMusic tell Sonos to start music in the {Study|Zone}
+StartMusic tell Sonos to start my music in the {Study|Zone}
+StartMusic tell Sonos to play my music in the {Study|Zone}
+StartMusic tell Sonos to play music in the {Study|Zone}
+StartMusic tell Sonos to start music in my {Den|Zone}
+StartMusic tell Sonos to start my music in my {Den|Zone}
+StartMusic tell Sonos to play my music in my {Den|Zone}
+StartMusic tell Sonos to play music in my {Den|Zone}
+StartMusic tell Sonos to start music in my {Bathroom|Zone}
+StartMusic tell Sonos to start my music in my {Bathroom|Zone}
+StartMusic tell Sonos to play my music in my {Bathroom|Zone}
+StartMusic tell Sonos to play music in my {Bathroom|Zone}
+StartMusic tell Sonos to start music in my {Bedroom|Zone}
+StartMusic tell Sonos to start my music in my {Bedroom|Zone}
+StartMusic tell Sonos to play my music in my {Bedroom|Zone}
+StartMusic tell Sonos to play music in my {Bedroom|Zone}
+StartMusic tell Sonos to start music in my {Dining Room|Zone}
+StartMusic tell Sonos to start my music in my {Dining Room|Zone}
+StartMusic tell Sonos to play my music in my {Dining Room|Zone}
+StartMusic tell Sonos to play music in my {Dining Room|Zone}
+StartMusic tell Sonos to start music in my {Patio|Zone}
+StartMusic tell Sonos to start my music in my {Patio|Zone}
+StartMusic tell Sonos to play my music in my {Patio|Zone}
+StartMusic tell Sonos to play music in my {Patio|Zone}
+StartMusic tell Sonos to start music in my {Study|Zone}
+StartMusic tell Sonos to start my music in my {Study|Zone}
+StartMusic tell Sonos to play my music in my {Study|Zone}
+StartMusic tell Sonos to play music in my {Study|Zone}
+
+StopMusic tell Sonos to stop music
+StopMusic tell Sonos to stop my music
+StopMusic tell Sonos to stop zone
+
+PauseAll tell Sonos to pause all
+PauseAll tell Sonos to pause all zones
+PauseAll tell Sonos to pause all music

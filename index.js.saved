@@ -1,0 +1,158 @@
+//'use strict';
+
+//var express = require('express');
+//var app = express();
+//var bodyParser     = require('body-parser');
+
+//app.set('port', (process.env.PORT || 5000));
+//app.use(bodyParser.json());
+
+//var controller = require('./sonos.controller');
+//var alexa = require('alexa-nodekit');
+var http = require('http');
+
+var config = require('./config.js');
+var alexa = require('alexa-app');
+var app = new alexa.app();
+var sessionAttributes = "{}";
+
+var shouldEndSession = true;
+
+var payload = "";
+var speechOutput = "";
+var options = {
+  host: config.homehost,
+  port: config.homeport
+};
+
+console.log("start debug");
+// Accept incoming Amazon Echo request.
+// The Intent Request will be parsed for the Intent type and then forwarded to its proper function.
+app.launch(function(req, res) {
+  var sessionId;
+  var userId;
+  console.log(req + " === " + res);
+  console.log("Version: " + req.version);
+  console.log("Body: " + req);
+  console.log("Request type " + req.type);
+  //res.say("This is a test, this is only a test.");
+//  if(req.type === 'LaunchRequest') {
+//    alexa.launchRequest(req);
+    // TODO For now, we don't care about the session or the user id, we will refactor this later.
+    sessionId = alexa.sessionId;
+    userId = alexa.userId;
+    res.say('Welcome to Sonos. What can I play for you?');
+//, {
+//      title: 'Alexa-Sonos',
+//      subtitle: 'Welcome to the Sonos app',
+//      content: 'Some commands are "Play favorite xxx" or "Play playlist xxx"'
+//    }, false, function (error, response) {
+//      if(error) {
+//        context.failed();
+//        return res.status(500).jsonp({message: error});
+//      }
+      console.log ("Return response: " + alexa.response);
+      //response.ask(response);
+    });
+app.intent('StartMusic', function(request,response) {
+console.log('start');
+      options.path='/Study/play';
+      console.log(options.path);
+      console.log("Options: " + options.host + options.port);
+      console.log("Sending: " + options.host + ":" + options.port + options.path);
+      response.say('Playing your music now');
+      var post_req = http.get(options, function(response){
+        var stringResult = "";
+        console.log("Got response: " + response.statusCode);
+        response.setEncoding('utf8');
+      response.on('data', function (chunk) {
+        stringResult += chunk;
+      });
+      response.on('end', function () {
+              console.log("result = "+stringResult);
+          callback(sessionAttributes,
+               buildSpeechletResponse(cardTitle, stringResult, repromptText, shouldEndSession));
+          });
+      });
+      post_req.write(payload);
+      post_req.end();
+    });
+app.intent('PlayPlaylist', function(request,response) {
+console.log('start');
+      options.path='/Study/play';
+      console.log(options.path);
+      response.say('Playing playlist');
+      });
+
+app.intent('StopMusic', function(request,response) {
+console.log('start');
+      options.path='/Study/pause';
+      console.log(options.path);
+      response.say('Stopping your music now');
+      });
+
+app.intent('PauseAll', function(request,response) {
+console.log('start');
+      options.path='/Study/pause';
+      console.log(options.path);
+      response.say('Pausing all zones now');
+      });
+
+      function getWelcomeResponse(callback) {
+          // If we wanted to initialize the session to have some attributes we could add those here.
+          var sessionAttributes = {};
+          var cardTitle = "Welcome";
+          var speechOutput=null;
+          var shouldEndSession = false;
+          //
+          // Make sure the key is initialized
+          //
+          if (myMakerKey == "INSERT_YOUR_MAKER_KEY_HERE") {
+              speechOutput = "Please edit the Lambda to specify your secret Maker Key before making a request.";
+              shouldEndSession = true;
+          }
+          else {
+              speechOutput = "Please state your command.";
+          }
+
+          // If the user either does not reply to the welcome message or says something that is not
+          // understood, they will be prompted again with this text.
+          var repromptText = "Please state one of the commands that the Intent Model is designed to process.  I'm sorry that I can't be more specific.";
+
+          callback(sessionAttributes,
+                   buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
+      }
+
+      // --------------- Helpers that build all of the responses -----------------------
+
+      function buildSpeechletResponse(title, output, repromptText, shouldEndSession) {
+          return {
+              outputSpeech: {
+                  type: "PlainText",
+                  text: output
+              },
+              card: {
+                  type: "Simple",
+                  title: "SessionSpeechlet - " + title,
+                  content: "SessionSpeechlet - " + output
+              },
+              reprompt: {
+                  outputSpeech: {
+                      type: "PlainText",
+                      text: repromptText
+                  }
+              },
+              shouldEndSession: shouldEndSession
+          };
+      }
+
+      function buildResponse(sessionAttributes, speechletResponse) {
+          return {
+              version: "1.0",
+              sessionAttributes: sessionAttributes,
+              response: speechletResponse
+          };
+      }
+
+
+exports.handler = app.lambda();
