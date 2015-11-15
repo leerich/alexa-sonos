@@ -1,0 +1,19 @@
+VolumePercent tell Sonos to turn up the {Zone} to {VolumePercent}
+VolumePercent tell Sonos to turn up the {Zone} to {VolumePercent} percent
+VolumePercent tell Sonos to turn up the volume {VolumePercent} percent in the {Zone}
+VolumePercent tell Sonos to turn up the volume to {VolumePercent} in the {Zone}
+
+
+{
+"intent": "VolumePercent",
+"slots": [
+{
+   "name": "Percent",
+   "type":  "AMAZON.NUMBER"
+},
+{
+    "name": "Zone",
+    "type": "LIST_OF_ZONES"
+}
+]
+},

@@ -130,12 +130,8 @@ function callIFTTT(intent, session, callback)
       case "StartMusic":
         intentName = "play";
         zone = intent.slots.Zone.value;
-        if (zone === "sun room") {
-          zone = zone.replace(/\s/g,"");
-        }
         speechOutput = "Okay, playing music in the " + zone;
-        //zone = zone.replace(/\s/g,"%20");
-        zone = encodeURIComponent(zone);
+        zone = zone.replace(/\s/g,"%20");
         console.log("Zone = " + intent.slots.Zone.value);
         console.log("intent.name = " + intentName);
         path = "/" + zone + "/" + intentName;
@@ -150,108 +146,36 @@ function callIFTTT(intent, session, callback)
       case "Pause":
         intentName = "pause";
         zone = intent.slots.Zone.value;
-        if (zone == "sun room") {
-          zone = zone.replace(/\s/g,"");
-          }
         speechOutput = "Okay, Pausing the " + zone;
-        zone = encodeURIComponent(zone);
-        //zone = zone.replace(/\s/g,"%20");
+        zone = zone.replace(/\s/g,"%20");
         path = "/" + zone + "/pause/";
         console.log("intentName = " + intentName);
         console.log("Zone = " + intent.slots.Zone.value);
-        console.log("Encoded Zone = " + zone);
         break;
       case "VolumeUp":
         intentName = "volumeup";
         zone = intent.slots.Zone.value;
-        if (zone == "sun room") {
-          zone = zone.replace(/\s/g,"");
-          }
         speechOutput = "Turning up the " + zone;
-        zone = encodeURIComponent(zone);
-        //zone = zone.replace(/\s/g,"%20");
+        zone = zone.replace(/\s/g,"%20");
         path = "/" + zone + "/volume/+10";
         break;
         case "VolumeDown":
           intentName = "volumedown";
           zone = intent.slots.Zone.value;
-          if (zone == "sun room") {
-            zone = zone.replace(/\s/g,"");
-            }
           speechOutput = "Turning down the " + zone;
-          //zone = zone.replace(/\s/g,"%20");
-          zone = encodeURIComponent(zone);
+          zone = zone.replace(/\s/g,"%20");
           path = "/" + zone + "/volume/-10";
           break;
-      case "PlayPreset":
-        intentName = "preset";
-        preset = encodeURIComponent(intent.slots.Preset.value);
-        speechOutput = "Playing " + intent.slots.Preset.value + " preset";
-        path = "/preset/" + preset;
-        console.log("Preset = " + preset);
-        break;
       case "PlayPlaylist":
         intentName = "playlist";
         zone = intent.slots.Zone.value;
-        if (zone === "sun room") {
-          zone = zone.replace(/\s/g,"");
-          }
         var playlist = intent.slots.Playlist.value;
         speechOutput = "Playing the " + playlist + " playlist in the " + zone;
-        //zone = zone.replace(/\s/g,"%20");
-        zone = encodeURIComponent(zone);
-        //playlist = playlist.replace(/\s/g,"%20");
-        playlist = encodeURIComponent(playlist);
+        zone = zone.replace(/\s/g,"%20");
+        playlist = playlist.replace(/\s/g,"%20");
         console.log("Zone = " + intent.slots.Zone.value);
         console.log("Playlist = " + intent.slots.Playlist.value);
-        console.log("Encoded Playlist = " + playlist);
         path = "/" + zone + "/favorite/" + playlist;
-        break;
-      case "AddZone":
-        intentName = "join";
-        oldzone = encodeURIComponent(intent.slots.OldZone.value);
-        newzone = encodeURIComponent(intent.slots.NewZone.value);
-        if (oldzone == "sun room") {
-          oldzone = oldzone.replace(/\s/g,"");
-          }
-        if (newzone == "sun room") {
-            newzone = newzone.replace(/\s/g,"");
-            }
-        speechOutput = "Adding " + intent.slots.NewZone.value + " to the " + intent.slots.OldZone.value;
-        console.log ("OldZone = " + intent.slots.OldZone.value);
-        console.log ("NewZone = " + intent.slots.NewZone.value);
-        path = "/" + newzone +"/join/" + oldzone;
-        break;
-      case "RemoveZone":
-          intentName = "remove";
-          oldzone = encodeURIComponent(intent.slots.OldZone.value);
-          newzone = encodeURIComponent(intent.slots.NewZone.value);
-          if (oldzone == "sun room") {
-            oldzone = oldzone.replace(/\s/g,"");
-            }
-          if (newzone == "sun room") {
-              newzone = newzone.replace(/\s/g,"");
-              }
-          speechOutput = "Removing " + intent.slots.NewZone.value + " from the " + intent.slots.OldZone.value;
-          console.log ("OldZone = " + intent.slots.OldZone.value);
-          console.log ("NewZone = " + intent.slots.NewZone.value);
-          path = "/" + oldzone +"/remove/" + newzone;
-          break;
-      case "VolumePercent":
-          intentName = "volumepercent";
-          zone = intent.slots.Zone.value;
-          volpercent = intent.slots.VolPercent.value;
-          if (zone == "sun room") {
-            zone = zone.replace(/\s/g,"");
-            }
-          console.log("Zone = " + intent.slots.Zone.value);
-          console.log("VolPercent = " + intent.slots.VolPercent.value);
-          speechOutput = "Turning the volume to " + volpercent;
-          //zone = zone.replace(/\s/g,"%20");
-          zone = encodeURIComponent(zone);
-          path = "/" + zone + "/volume/" + volpercent;
-          console.log("Path = " + path);
-          break;
     }
 
 
